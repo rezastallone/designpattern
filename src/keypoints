@@ -1,0 +1,28 @@
+OO Principles
+
+1. Separate what varies and what stays. encapsulate what varies so it wont affect your system when changed.
+2. Program to an interface not implementation, this align with point 1 also dependency inversion
+
+ "When designing application, we can first anticipate part that are changing and build the flexibility to deal with it"
+ "Combination between interface & subclassing is good for inheriting common behavior and to have good interface segregation"
+
+ 3. Favor composition over inheritance, inheritance limits flexibility of composing behaviors, because we don't know what changes will be
+ made to the system, inheritance limits our ability to deal with that changes.
+
+ 4. Prefer loosely coupled design that can handle changes because they minimize interdependency between objects
+
+ 5. Class should be open for extensions but closed for modification. for example : by favoring composition over inheritence we can alter
+ behavior of a class at runtime dynamically without changing the code which is the contras of inheritance ( subclass has same
+ behavior set statically at compile time ).
+
+ 6. Be careful when choosing area of code to apply open closed principle, applying it everywhere is wasteful, unnecessary
+ & can lead to hard to understand & complex code.
+
+ OO patterns
+ 1. Strategy -
+
+ 2. Observer - one to many relationship between object so when one data is updated, all dependant object is also notified
+
+ 3. Decorator - Add responsibilities dynamically to object which is alternative to subclassing
+
+ 4.

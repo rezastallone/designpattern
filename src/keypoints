@@ -11,12 +11,30 @@ OO Principles
 
  4. Prefer loosely coupled design that can handle changes because they minimize interdependency between objects
 
- 5. Class should be open for extensions but closed for modification. for example : by favoring composition over inheritence we can alter
+ 5. Class should be open for extensions but closed for modification. for example : by favoring composition over inheritance we can alter
  behavior of a class at runtime dynamically without changing the code which is the contras of inheritance ( subclass has same
  behavior set statically at compile time ).
 
  6. Be careful when choosing area of code to apply open closed principle, applying it everywhere is wasteful, unnecessary
  & can lead to hard to understand & complex code.
+
+ 7. When you have instantiate series of class that based on some conditions, when it comes to extensions/change either when you want to add
+ or delete certain instantiate, you need to open it. often this kind of code ends up in several part of code making maintenance more difficult.
+
+ 8. insulating `new` inside a class allow us to deal with change of instantiation in one place, we let the code deal with
+ the implementation through polymorphism this way when adding new class that implement that interface we don't have to reopen the class
+
+ 9. One good symptom when you need abstract factory method is when you have two variables used in nested if that provides
+ conditions on which object to instantiate
+
+ 10. Depend upon abstraction. Do not depend upon concrete classes.
+
+ 11. Dependency inversion inverts our design to think through abstraction on high level, several points that violate it :
+    - No variable should hold a reference to a concrete class
+    - No class should derive from a concrete class
+    - No method should override from an implemented method of its base classes
+
+ 12. 
 
  OO patterns
  1. Strategy -

@@ -1,6 +1,7 @@
 OO Principles
 
 1. Separate what varies and what stays. encapsulate what varies so it wont affect your system when changed.
+
 2. Program to an interface not implementation, this align with point 1 also dependency inversion
 
  "When designing application, we can first anticipate part that are changing and build the flexibility to deal with it"
@@ -34,7 +35,14 @@ OO Principles
     - No class should derive from a concrete class
     - No method should override from an implemented method of its base classes
 
- 12. 
+ 12. With singleton pattern, you let a class manage its own instance and make its instantiation lazy, also we provide global single
+ access point so we just query and it return it instance
+
+ 13. use synchronize to ensure all thread access one at a time. but it slow method by factor of 100. use it if no performance impact.
+ dont use it if high traffic accessing getInstance()
+
+ 14. If getInstance() is always accessed or cost of creation is small, use static initializer (Eager initialization), this is guaranteed to be thread safe
+ and doesn't incur performance penalty on getInstance() because it's ready guaranteed by JVM before all thread can access it.
 
  OO patterns
  1. Strategy -
@@ -43,4 +51,8 @@ OO Principles
 
  3. Decorator - Add responsibilities dynamically to object which is alternative to subclassing
 
- 4.
+ 4. Abstract Factory pattern -
+
+ 5. Singleton - pattern to create single instance of a class with single global access point
+
+ 6.

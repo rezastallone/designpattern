@@ -44,6 +44,9 @@ OO Principles
  14. If getInstance() is always accessed or cost of creation is small, use static initializer (Eager initialization), this is guaranteed to be thread safe
  and doesn't incur performance penalty on getInstance() because it's ready guaranteed by JVM before all thread can access it.
 
+ 15. the difference between strategy pattern and command pattern is that command pattern has invoker object that invoke the "strategy" object while
+  strategy pattern invokes the object directly.
+
  OO patterns
  1. Strategy -
 
@@ -55,4 +58,7 @@ OO Principles
 
  5. Singleton - pattern to create single instance of a class with single global access point
 
- 6.
+ 6. Command - encapsulate a request as an object thus allowing us to parameterized other object with different request
+ queue or log requests, and support undoable operations.
+
+ 7.

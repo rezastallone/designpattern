@@ -47,6 +47,8 @@ OO Principles
  15. the difference between strategy pattern and command pattern is that command pattern has invoker object that invoke the "strategy" object while
   strategy pattern invokes the object directly.
 
+ 16. Adapter pattern saves me from reimplementing adaptee class, adapter allows client to use target interface.
+
  OO patterns
  1. Strategy -
 
@@ -61,4 +63,4 @@ OO Principles
  6. Command - encapsulate a request as an object thus allowing us to parameterized other object with different request
  queue or log requests, and support undoable operations.
 
- 7.
+ 7. Adapter - adapt different types of interface allowing client to use target interface

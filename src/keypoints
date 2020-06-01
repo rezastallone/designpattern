@@ -39,7 +39,7 @@ OO Principles
  access point so we just query and it return it instance
 
  13. use synchronize to ensure all thread access one at a time. but it slow method by factor of 100. use it if no performance impact.
- dont use it if high traffic accessing getInstance()
+ don't use it if high traffic accessing getInstance()
 
  14. If getInstance() is always accessed or cost of creation is small, use static initializer (Eager initialization), this is guaranteed to be thread safe
  and doesn't incur performance penalty on getInstance() because it's ready guaranteed by JVM before all thread can access it.
@@ -52,14 +52,24 @@ OO Principles
  17. Principle of Least Knowledge - talk only to your immediate friends ( creating system that knows too much of each other subsystem
  create highly couple classes and will make maintenance hard because changes in one part will impact a lot of places.
 
+ 18. Dependency Rot - when high level component depends on low level component depends on high level depends on side way components.
+ this makes the system design hard to understand.
+
+ 19. Hollywood principle - 'Don't call us, we'll call you' low level component is called by high level component, low level
+ component only hook themselves to high level, high level determine when and how low level is used.
+
+ 20. Dependency inversion dictate general principle to decouple by depending on abstract to avoid too much dependency on concrete.
+ while hollywood principle provide technique to make low level component hooked into computation in high level component
+ without creating too much dependency.
+
  OO patterns
- 1. Strategy -
+ 1. Strategy - Encapsulate interchangeable behavior and use delegation decide which behavior to use ( not stuck with inheritance )
 
  2. Observer - one to many relationship between object so when one data is updated, all dependant object is also notified
 
  3. Decorator - Add responsibilities dynamically to object which is alternative to subclassing
 
- 4. Abstract Factory pattern -
+ 4. Abstract Factory pattern - Subclass decides which class to create
 
  5. Singleton - pattern to create single instance of a class with single global access point
 
@@ -70,3 +80,6 @@ OO Principles
 
  8. Facade - simplified interface to access subsystem while still let client use the subsystem classes, this DP decouple
  client from complex system
+
+ 9. Template - Provide series of steps ( outlining a program ) as template and let subclass implement some of the steps without changing the
+ structure of the algorithm ( subclass decides how to implement a step of algorithm )

@@ -49,6 +49,9 @@ OO Principles
 
  16. Adapter pattern saves me from reimplementing adaptee class, adapter allows client to use target interface.
 
+ 17. Principle of Least Knowledge - talk only to your immediate friends ( creating system that knows too much of each other subsystem
+ create highly couple classes and will make maintenance hard because changes in one part will impact a lot of places.
+
  OO patterns
  1. Strategy -
 
@@ -64,3 +67,6 @@ OO Principles
  queue or log requests, and support undoable operations.
 
  7. Adapter - adapt different types of interface allowing client to use target interface
+
+ 8. Facade - simplified interface to access subsystem while still let client use the subsystem classes, this DP decouple
+ client from complex system

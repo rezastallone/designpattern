@@ -62,6 +62,23 @@ OO Principles
  while hollywood principle provide technique to make low level component hooked into computation in high level component
  without creating too much dependency.
 
+ 21. Collection or aggregated object can be represented by many data structure, therefore we need a uniform way to step
+ through all elements so we can iterate in a polymorphic way. iterator pattern is the answer.
+
+ 22. Iterator pattern has iterator interface and aggregate interface, aggregate interface decides which concrete iterator
+ gets instantiated, this is almost similar to the concept of factory pattern.
+
+ 23. External iterator lets client hold the iterator object and use it however they want while internal iterator performs iteration inside
+ the aggregate object, client must pass in operation that performed on each iteration, this is less flexible compared to external iterator
+
+ 24. modifying class for more than one reason provides opportunity for problem to creeps in. when code inside a class has low
+ cohesion between each other that mean it has more than one responsibility and can be extracted into separate class. cohesion is grouping of
+ rateable object.
+
+ 25. Sometimes our design seems to violates our principles, but in some cases it just a matter of perspective. for instance,
+ it might seems incorrect to have child management operations in leaf node but we can always shift our perspective to see
+ leaf node as parent node that has zero children
+
  OO patterns
  1. Strategy - Encapsulate interchangeable behavior and use delegation decide which behavior to use ( not stuck with inheritance )
 
@@ -83,3 +100,8 @@ OO Principles
 
  9. Template - Provide series of steps ( outlining a program ) as template and let subclass implement some of the steps without changing the
  structure of the algorithm ( subclass decides how to implement a step of algorithm )
+
+ 10. Iterator - provide way to iterate over collection of object without exposing the underlying data structure of the collection.
+
+ 11. Composite - is a tree-like structure of part-whole where we can use an operation on both the whole or the part of the structure ( treat uniformly )
+

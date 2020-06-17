@@ -79,6 +79,12 @@ OO Principles
  it might seems incorrect to have child management operations in leaf node but we can always shift our perspective to see
  leaf node as parent node that has zero children
 
+ 26. State pattern localize the behavior of different state so when we add new one we have little chance to unintentionally change
+ existing state
+
+ 27. State pattern transition between each state discretely, each state may know each other state. while strategy pattern
+ transition behavior in runtime explicitly and controlled by client. each strategy my not know each other.
+
  OO patterns
  1. Strategy - Encapsulate interchangeable behavior and use delegation decide which behavior to use ( not stuck with inheritance )
 
@@ -104,4 +110,6 @@ OO Principles
  10. Iterator - provide way to iterate over collection of object without exposing the underlying data structure of the collection.
 
  11. Composite - is a tree-like structure of part-whole where we can use an operation on both the whole or the part of the structure ( treat uniformly )
+
+ 12. State - Change object behavior when its internal state is changes.
 

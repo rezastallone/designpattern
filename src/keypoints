@@ -85,6 +85,19 @@ OO Principles
  27. State pattern transition between each state discretely, each state may know each other state. while strategy pattern
  transition behavior in runtime explicitly and controlled by client. each strategy my not know each other.
 
+ 28. Remote proxy : proxy for object that remote, virtual proxy : proxy for object that expensive to create.
+
+ 29. Proxy and decorator is pretty similar, they add behavior to a class BUT proxy control access to the class while decorator will let
+ the controlled class shows its behavior as well.
+
+ 30. Firewall proxy : protect object from bad client
+ Smart reference proxy : count number of object referenced
+ Caching proxy : store result of computation and can be used by many clients.
+ Synchronization Proxy : safe access to a subject shared by multiple thread.
+ Complexity hiding proxy : hide complexity access to set of class, different from facade because it control the access, facade
+ only provide alternate interface
+ Copy-On-Write proxy : deferring copy operation until client needs it
+
  OO patterns
  1. Strategy - Encapsulate interchangeable behavior and use delegation decide which behavior to use ( not stuck with inheritance )
 
@@ -112,4 +125,9 @@ OO Principles
  11. Composite - is a tree-like structure of part-whole where we can use an operation on both the whole or the part of the structure ( treat uniformly )
 
  12. State - Change object behavior when its internal state is changes.
+
+ 13. Proxy - provide representative object that control access to another object, which maybe remote, expensive to create or
+ in need of recurring.
+
+ 14.
 

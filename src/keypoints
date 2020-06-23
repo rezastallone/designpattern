@@ -98,7 +98,50 @@ OO Principles
  only provide alternate interface
  Copy-On-Write proxy : deferring copy operation until client needs it
 
- OO patterns
+ 31. MVC is combination of strategy, observer & composite pattern.
+ View implement composite pattern to compose UI component.
+ Controller implement strategy to let view has different behavior at runtime.
+ Model implement observer pattern to let view change its view when mode changed.
+
+ 31. Context is when a pattern applies and usually recurring, when we have a goal to achieve along with constrain in those context,
+ that mean we can have a design to resolve that goal along with its constrain. its called design pattern.
+
+ 32. Creational - instantiation of object and decouple them from client
+ Behavioral - control how classes & object interact & distribute responsibility
+ Structural - compose object into larger object
+ Class - relationship between class via inheritance that established in compile time
+ Object - relationship between class via composition that established in runtime, more flexible.
+
+ 33. When you design for a problem you need to keep it simple, don't think "How to apply this pattern to this problem",
+ other developer wont see you as sophisticated when you apply a pattern. its the simplicity.
+
+ 34. Pattern is not a magic bullet, you need to think the consequence to the rest of your design but be assured that pattern
+ has been tested by many developer.
+
+ 35. Use pattern when you're use it address your problem, if simpler solution exist, use it instead. matching the constrain of the problem
+ you're trying to solve will help you decide if you need a pattern or which pattern to use, but it requires experience & knowledge.
+
+ 36. When both simple & pattern solution works but you're sure part of the system may vary in the future, its preferable to use pattern.
+ just make sure adding pattern for practical change not hypothetical change.
+
+ 37. We have to be careful with pattern because it introduce complexity and we never want complexity when its needed, but they are
+ powerful when proven needed, they also have been tested and is a shared vocabulary between developer.
+
+ 38. Pattern can be applied in many form :
+ Architectural pattern
+ Application pattern
+ Domain-specific pattern
+ Business process pattern
+ Organizational pattern
+ User Interface Design pattern
+
+ 39. Anti pattern tells you how to go from problem to a BAD solution. avoiding bad solution is as good as finding a good one.
+ Anti pattern explains when bad solution is attractive, this is why people choose this over good solution.
+ Anti pattern explains bad thing would happen down the road when not using the good solution.
+ Anti pattern gives you direction to other pattern that may applicable for the problem.
+
+
+ OO Design Patterns
  1. Strategy - Encapsulate interchangeable behavior and use delegation decide which behavior to use ( not stuck with inheritance )
 
  2. Observer - one to many relationship between object so when one data is updated, all dependant object is also notified
@@ -128,6 +171,4 @@ OO Principles
 
  13. Proxy - provide representative object that control access to another object, which maybe remote, expensive to create or
  in need of recurring.
-
- 14.
 
